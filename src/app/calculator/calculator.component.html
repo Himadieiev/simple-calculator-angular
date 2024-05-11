@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <input type="number" class="input" placeholder="Enter first number" [formControl]="firstNumber" />
+  <select class="select" [formControl]="operation">
+    <option class="option" value="+">+</option>
+    <option class="option" value="-">-</option>
+    <option class="option" value="*">*</option>
+    <option class="option" value="/">/</option>
+  </select>
+  <input
+    type="number"
+    class="input"
+    placeholder="Enter second number"
+    [formControl]="secondNumber"
+  />
+  <p class="result-wrapper">
+    <span class="result-title">Result:</span>
+    <span class="result-value"> {{ result ? result : ' enter numbers and push "Start"' }}</span>
+  </p>
+  <button type="button" class="button" (click)="calculation()">Start</button>
+</div>
