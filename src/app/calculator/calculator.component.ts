@@ -30,4 +30,11 @@ export class CalculatorComponent {
         break;
     }
   }
+
+  public reset() {
+    this.firstNumber.setValue(null);
+    this.secondNumber.setValue(null);
+
+    this.result = undefined;
+  }
 }

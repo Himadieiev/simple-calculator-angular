@@ -1,6 +1,6 @@
 <div class="wrapper">
   <input type="number" class="input" placeholder="Enter first number" [formControl]="firstNumber" />
-  <select class="select" [formControl]="operation">
+  <select class="select" [formControl]="operation" title="Choose operations">
     <option class="option" value="+">+</option>
     <option class="option" value="-">-</option>
     <option class="option" value="*">*</option>
@@ -15,8 +15,25 @@
   <p class="result-wrapper">
     <span class="result-title">Result:</span>
     <span class="result-value">
-      {{ result || result === 0 ? result : ' enter numbers and push "Start"' }}</span
+      {{ result || result === 0 ? result : 'enter numbers and push "Start"' }}</span
     >
   </p>
-  <button type="button" class="button" (click)="calculation()">Start</button>
+  <div class="btns-wrapper">
+    <button
+      type="button"
+      class="btn-start"
+      (click)="calculation()"
+      [disabled]="firstNumber.value === null || secondNumber.value === null"
+    >
+      Start
+    </button>
+    <button
+      type="button"
+      class="btn-reset"
+      (click)="reset()"
+      [disabled]="firstNumber.value === null || secondNumber.value === null"
+    >
+      Reset
+    </button>
+  </div>
 </div>

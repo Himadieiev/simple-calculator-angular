@@ -17,14 +17,20 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .select {
-  width: 50px;
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
   margin-left: 10px;
+  font-size: 18px;
   border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 .option {
   color: black;
+  font-weight: bold;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -39,17 +45,51 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .result-value {
-  color: blue;
+  margin-left: 10px;
+  color: rgb(174, 174, 237);
+  font-size: 18px;
 }
 
-.button {
-  padding: 5px 10px;
+.btns-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn-start {
+  width: 100px;
+  height: 30px;
   border-radius: 3px;
   background-color: blue;
   transition: all 0.3s linear;
 
   &:hover {
     background-color: white;
-    color: blue;
+    color: black;
+  }
+
+  &:disabled {
+    background-color: grey;
+    color: white;
+  }
+}
+
+.btn-reset {
+  width: 100px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: blue;
+    color: white;
+  }
+
+  &:disabled {
+    background-color: grey;
+    color: white;
   }
 }
