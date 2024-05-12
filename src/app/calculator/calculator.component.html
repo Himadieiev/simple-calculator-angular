@@ -14,7 +14,9 @@
   />
   <p class="result-wrapper">
     <span class="result-title">Result:</span>
-    <span class="result-value"> {{ result ? result : ' enter numbers and push "Start"' }}</span>
+    <span class="result-value">
+      {{ result || result === 0 ? result : ' enter numbers and push "Start"' }}</span
+    >
   </p>
   <button type="button" class="button" (click)="calculation()">Start</button>
 </div>
